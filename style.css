@@ -82,14 +82,34 @@
 
 .ex-10-icon {
     font-size: 60px;
+    animation: loading-icon infinite 1s linear;
 }
 @keyframes loading-icon {
-
+    from {
+        transform: rotate(365deg);
+        
+    }
+    to {
+        transform: rotate(0deg);
+    }
 }
 
 .ex-11-icon {
     font-size: 60px;
 }
+.ex-11-icon:hover {
+    animation: rotate 1.5s linear;
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    70% {
+        transform: rotate(330deg);
+        animation-timing-function: ease-out;
+    }
+}
+
 .ex-12-button, .ex-13-button {
     position: relative;
     display: block;
